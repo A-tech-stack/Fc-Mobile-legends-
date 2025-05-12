@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FC Mobile League</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #141e30, #243b55);
+      color: #fff;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .register-link {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 10px 20px;
+      background-color: #00bcd4;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .register-link:hover {
+      background-color: #0097a7;
+    }
+
+    table {
+      width: 90%;
+      margin: 2rem auto;
+      border-collapse: collapse;
+      background-color: #fff;
+      color: #000;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 12px 15px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #00bcd4;
+      color: #fff;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f1f1f1;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #e0f7fa;
+    }
+
+    .form-container {
+      width: 90%;
+      max-width: 500px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background-color: #fff;
+      color: #000;
+      border-radius: 10px;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .form-group button {
+      width: 100%;
+      padding: 12px;
+      background-color: #00bcd4;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .form-group button:hover {
+      background-color: #0097a7;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>FC Mobile League Table</h1>
+    <a href="#register" class="register-link">Register for the League</a>
+  </header>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Position</th>
+        <th>Team</th>
+        <th>Played</th>
+        <th>Wins</th>
+        <th>Draws</th>
+        <th>Losses</th>
+        <th>GF</th>
+        <th>GA</th>
+        <th>GD</th>
+        <th>Points</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>Faladinho</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+      <tr><td>2</td><td>Wutang</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+      <tr><td>3</td><td>Ola</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+      <tr><td>4</td><td>Big Vick</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+      <tr><td>5</td><td>Triple A</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+    </tbody>
+  </table>
+
+  <div class="form-container" id="register">
+    <h2>League Registration</h2>
+    <form action="register.php" method="POST">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="form-group">
+        <label for="team">Team Name</label>
+        <input type="text" id="team" name="team" required />
+      </div>
+      <div class="form-group">
+        <label for="message">Message (optional)</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit">Submit Registration</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
